@@ -1,0 +1,26 @@
+.mvn/
+mvnw
+mvnw.cmd
+.idea/
+*.iml
+target/
+out/
+
+customer/target/
+fraud/target
+eurekaserver/target
+# Package files
+*.jar
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Sensitive information
+*.pem
+*.key
+*.crt
+
+# Google Cloud specific files (adjust as needed)
+.google/
+google-credentials.json

@@ -12,6 +12,16 @@
         },
         {
             "type": "java",
+            "name": "Spring Boot-CustomerApplication<customer2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.smartsys.customer.CustomerApplication",
+            "projectName": "customer",
+            "args": "--server.port=8085",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-FraudApplication<fraud>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

@@ -4,9 +4,7 @@ mvnw.cmd
 *.iml
 target/
 
-customer/target/
-fraud/target
-eurekaserver/target
+**/target/
 # Package files
 *.jar
 

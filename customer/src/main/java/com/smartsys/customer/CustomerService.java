@@ -2,10 +2,13 @@ package com.smartsys.customer;
 
 import org.springframework.stereotype.Service;
 
+import com.smartsys.clients.FraudCheckResponse;
+import com.smartsys.clients.FraudClient;
+
 @Service
 public record CustomerService(
     CustomerRepository customerRepository,
-    CustomerConfig customerConfig) {
+    FraudClient fraudClient) {
     public void registerCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
         Customer customer = Customer.builder()
             .firstName(customerRegistrationRequest.firstName())
@@ -16,11 +19,8 @@ public record CustomerService(
         //todo: check valid email
         customerRepository.saveAndFlush(customer); 
 
-        FraudCheckResponse fraudCheckResponse = customerConfig.restTemplate().getForObject(
-            "http://FRAUD/api/v1/fraud-check/{customerId}",
-            FraudCheckResponse.class,
-            customer.getId()
-        );
+        FraudCheckResponse fraudCheckResponse =
+                fraudClient.isFraudster(customer.getId());
 
         if (fraudCheckResponse.isFraudster()) {
             throw new IllegalStateException("fraudster");

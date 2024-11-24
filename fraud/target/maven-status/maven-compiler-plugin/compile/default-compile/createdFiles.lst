@@ -1,7 +1,0 @@
-com/smartsys/fraud/FraudApplication.class
-com/smartsys/fraud/FraudCheckService.class
-com/smartsys/fraud/FraudCheckResponse.class
-com/smartsys/fraud/FrandCheckController.class
-com/smartsys/fraud/FraudCheck.class
-com/smartsys/fraud/FraudCheck$FraudCheckBuilder.class
-com/smartsys/fraud/FraudCheckRepository.class

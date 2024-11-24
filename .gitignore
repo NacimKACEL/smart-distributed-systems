@@ -2,13 +2,13 @@
 mvnw
 mvnw.cmd
 .idea/
+.vscode/
 *.iml
 target/
-out/
 
-customer/target/
-fraud/target
-eurekaserver/target
+./customer/target/
+./fraud/target
+./eurekaserver/target
 # Package files
 *.jar
 

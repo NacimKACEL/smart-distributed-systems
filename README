@@ -1,0 +1,13 @@
+# Microservices 📝  
+   
+  
+  ## Get Started 🚀   
+  
+  ## Prebuilt Components/Templates 🔥  
+  
+  ## Source ✨  
+DOC Spring boot : https://spring.io/microservices
+
+Connection to database : use host postgres because we are conneting from container to container
+We can to dependency injection with @AllArgsConstructor instead of creating a constructor in service, controller.
+  

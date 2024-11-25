@@ -1,3 +1,3 @@
-package com.smartsys.clients;
+package com.smartsys.clients.fraud;
 
 public record FraudCheckResponse(Boolean isFraudster) {}
